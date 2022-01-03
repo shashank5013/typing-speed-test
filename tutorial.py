@@ -29,7 +29,10 @@ def start_screen(stdscr):
             key=stdscr.getkey()
         except:
             continue
-        
+        if(curr_text==[]):
+            start_time=time.time()
+
+            
         if(ord(key)==27):
             exit() 
         if(key in ("KEY_BACKSPACE",'\b',"\x7f")):
